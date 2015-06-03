@@ -1,3 +1,4 @@
+
 <div class="header">
     <div class="header_resize">
       <div class="logo">
@@ -5,11 +6,16 @@
       </div>
       <div class="menu_nav">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="support.html">Support</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="blog.html">Profile</a></li>
-          <li><a href="contact.html">Contact Us</a></li>
+          <li class="active"><%=link_to "Home", basics_index_path %></li>
+          <li><%=link_to "Support", basics_support_path %></li>
+          <li><%=link_to "About Us  ", basics_about_path %></li>
+          <li><%=link_to "Profile", basics_blog_path %></li>
+          <li><%=link_to "Contact Us", basics_contact_path %></li>
+          <% if user_signed_in? %>
+          <li><%=link_to "Logout",  destroy_user_session_path, method: 'delete'%></li>
+          <% else %>
+          <li><%=link_to "Login",  new_user_session_path %></li>
+          <% end %>
         </ul>
       </div>
       <div class="clr"></div>
