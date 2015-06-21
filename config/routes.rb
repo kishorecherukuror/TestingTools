@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   get 'basics/blog'
 
   get 'basics/contact'
+  post 'basics/contact'
 
   get 'basics/index'
 

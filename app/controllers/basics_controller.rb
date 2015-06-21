@@ -7,6 +7,7 @@ class BasicsController < ApplicationController
   end
 
   def contact
+      UserMailer.welcome_email(params).deliver_later
   end
 
   def index

@@ -12,8 +12,23 @@
 </style>
 </head>
 <body>
+<div class="main">
+  <%= render "shared/header" %>
+  <div class="content">
+    <div class="content_resize">
+	<%= render "shared/header_image" %>
+      <div class="mainbar">
+        <%= yield %>
+      </div>
+     <%= render "shared/sidebar" %>
+      <div class="clr"></div>
+    </div>
+  </div>
+  <%= render "shared/footer" %>
+</div>
 
-<%= yield %>
+
+
 
 </body>
 </html>
